@@ -61,7 +61,7 @@ public class DataSource {
            resultSet.getString("type"),
            resultSet.getDouble("balance"));
       }
-    }catch(SQLException e){
+    } catch(SQLException e){
       e.printStackTrace();
     }
 

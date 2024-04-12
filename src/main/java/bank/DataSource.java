@@ -47,7 +47,7 @@ public class DataSource {
 
 
   public static Account getAccount(int accountId) {
-    String sql = "select * from accounts where the id = ?";
+    String sql = "select * from accounts where id = ?";
     Account account = null;
     try (
        Connection connection = connect();

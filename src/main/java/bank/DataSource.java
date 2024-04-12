@@ -49,9 +49,9 @@ public class DataSource {
   public static Account getAccount(int accountId) {
     String sql = "select * from accounts where the id = ?";
     Account account = null;
-    try(
-      Connection connection = connect();
-      PreparedStatement statement = connection.prepareStatement(sql)){
+    try (
+       Connection connection = connect();
+       PreparedStatement statement = connection.prepareStatement(sql)){
       
         statement.setInt(1, accountId);
 

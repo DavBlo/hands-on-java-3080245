@@ -55,11 +55,11 @@ public class DataSource {
       
         statement.setInt(1, accountId);
 
-      try(ResultSet resultSet = statement.executeQuery()){
+      try (ResultSet resultSet = statement.executeQuery()){
         account = new Account(
-          resultSet.getInt("id"),
-          resultSet.getString("type"),
-          resultSet.getDouble("balance"));
+           resultSet.getInt("id"),
+           resultSet.getString("type"),
+           resultSet.getDouble("balance"));
       }
     }catch(SQLException e){
       e.printStackTrace();
